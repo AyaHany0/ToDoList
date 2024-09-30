@@ -1,0 +1,350 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: "Yeseva One", serif;
+}
+/* ---------------------------------------------------------------------- */
+#vanta-bg {
+  min-height: 100vh !important;
+}
+canvas {
+  height: 100vh;
+  min-height: 100vh;
+}
+/* Starter  */
+.starter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.starter-content {
+  text-align: center;
+  color: #264e7f;
+}
+
+/* Button styling */
+.starter-content button {
+  background-color: #2d5e96;
+  color: white;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 1.5rem 2.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.starter-content button:hover {
+  background-color: #7fa7ee;
+}
+
+.btn-text {
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+.plane-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -220px;
+  animation: planemoving 1.5s forwards;
+  background-color: transparent;
+  color: #5081d5;
+}
+/* Fade-out animation */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+@keyframes planemoving {
+  0% {
+    bottom: -200px;
+  }
+  20% {
+    bottom: -150px;
+  }
+  40% {
+    bottom: -100px;
+  }
+  60% {
+    bottom: -50px;
+  }
+
+  80% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+/* ----------------------------------------------------------------------------- */
+/* Modal styling */
+.modal {
+  background-color: #92b5de;
+  min-width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none; /* Initially hidden */
+}
+
+.modal.visible {
+  display: block;
+  opacity: 1;
+}
+.question span {
+  font-weight: 600;
+  color: #113d72;
+  line-height: 3rem;
+}
+.rockstar {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #264e7f;
+}
+.question {
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #264e7f;
+}
+
+#userName {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  margin: 20px;
+  border-radius: 15px;
+  border: 1px solid #264e7d;
+  outline: none;
+  color: #264e7d;
+  font-size: 1.5rem;
+}
+
+#submitName {
+  padding: 10px 20px;
+  background-color: #264e7d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#submitName:hover {
+  background-color: #113d72;
+  color: #fff;
+}
+
+.alert {
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+/* Task body */
+.list {
+  min-width: 60%;
+  max-width: 80%;
+  margin: auto;
+  z-index: 3;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+h1 {
+  text-align: center;
+  color: #113d72;
+}
+#taskInput {
+  width: 80%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #2d5e96;
+  outline: #2d5e96;
+}
+#addTaskBtn {
+  padding: 10px 15px;
+  background-color: #264e7d;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+.taskempty {
+  color: #5081d5;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 20px;
+}
+li {
+  border: 1px solid #5081d5;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btns button {
+  border-radius: 15px;
+  background-color: transparent;
+  border: 1px solid #113d72;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  color: #113d72;
+}
+.btns button:hover {
+  background-color: #5081d5;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.taskname {
+  font-size: 0.7rem;
+  color: #113d72;
+}
+/* ------------------------------------------------------ */
+.editmodal {
+  background-color: #92b5de;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 3;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1rem;
+  color: #113d72;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.editmodal input {
+  border: 2px soild #113d72;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.editmodal button {
+  padding: 10px 15px;
+  color: #113d72;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+#userGreeting {
+  font-size: 1.5rem;
+  color: #113d72;
+  padding: 20px 0;
+  text-align: center;
+}
+.completed {
+  text-decoration: line-through;
+  color: black;
+}
+
+li p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input[type="checkbox"] {
+  accent-color: #113d72;
+  cursor: pointer;
+}
+/* Notification styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: -350px; /* Initially hidden off screen */
+  background-color: #113d72;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  width: 300px;
+  transition: all 0.5s ease-in-out;
+}
+
+.notification.show {
+  right: 40px; /* Slide in */
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.planeicon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  animation: fly 3s ease-in-out forwards;
+  color: #113d72;
+}
+
+/* Animation for plane icon */
+@keyframes fly {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
