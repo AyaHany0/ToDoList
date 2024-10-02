@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 * {
-  font-family: "Yeseva One", serif;
+  font-family: "DM Serif Text", serif;
 }
 /* ---------------------------------------------------------------------- */
 #vanta-bg {
@@ -222,7 +222,11 @@ li {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 1rem;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(200px);
+  box-shadow: 0 3px 10px #92b5de;
 }
+
 .btns {
   display: flex;
   justify-content: space-between;
@@ -246,8 +250,12 @@ li {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .taskname {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   color: #113d72;
+  margin: 0;
+}
+.taskname input {
+  margin-right: 0.8rem;
 }
 /* ------------------------------------------------------ */
 .editmodal {
